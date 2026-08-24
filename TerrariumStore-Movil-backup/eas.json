@@ -1,0 +1,45 @@
+{
+  "cli": {
+    "version": ">= 12.0.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "env": {
+        "API_URL": "https://api-dev.terrariumstore.mx"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "channel": "preview",
+      "env": {
+        "API_URL": "https://api-staging.terrariumstore.mx"
+      },
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "production": {
+      "channel": "production",
+      "autoIncrement": true,
+      "env": {
+        "API_URL": "https://api.terrariumstore.mx"
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "ios": {
+        "appleId": "PENDIENTE_CUENTA_DEL_CLIENTE",
+        "ascAppId": "PENDIENTE_AL_CREAR_APP_EN_APP_STORE_CONNECT",
+        "appleTeamId": "PENDIENTE_CUENTA_DEL_CLIENTE"
+      },
+      "android": {
+        "serviceAccountKeyPath": "./google-service-account.json",
+        "track": "production"
+      }
+    }
+  }
+}
