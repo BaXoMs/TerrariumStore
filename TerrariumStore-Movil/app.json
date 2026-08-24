@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "Terrarium Store",
+    "slug": "terrarium-store",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "terrariumstore",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F7F4EC"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "mx.terrariumstore.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Usamos la cámara para que puedas subir fotos si registrás una consulta o mascota.",
+        "NSPhotoLibraryUsageDescription": "Necesitamos acceso a tus fotos para adjuntar imágenes de tu mascota."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#F7F4EC"
+      },
+      "package": "mx.terrariumstore.app",
+      "permissions": [
+        "CAMERA",
+        "READ_MEDIA_IMAGES",
+        "NOTIFICATIONS"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#5FA832"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "PENDIENTE_AL_CREAR_PROYECTO_EN_EAS"
+      }
+    }
+  }
+}

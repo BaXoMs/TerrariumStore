@@ -1,0 +1,42 @@
+/* terrarium-web/styles/tokens.css
+   Fuente única de verdad del sistema visual — se importa en tailwind.config.ts
+   vía CSS variables, y se usa directo en cualquier componente. */
+
+:root {
+    /* Base */
+    --color-page: #F7F4EC;
+    --color-paper: #FFFFFF;
+    --color-ink: #16261A;
+    --color-ink-soft: #55635A;
+    --color-line: #E4DFD1;
+
+    /* Acento principal — CTAs, precios, WhatsApp, tab/link activo */
+    --color-lime: #5FA832;
+    --color-lime-soft: #E7F3DA;
+
+    /* Acento "Tienda" — bordes e íconos del lado comercial */
+    --color-bamboo: #B98F4E;
+    --color-bamboo-soft: #F4E9D3;
+
+    /* Acento "Veterinaria" — exclusivo para lo clínico, nunca decorativo */
+    --color-red: #B5342A;
+    --color-red-soft: #FBE7E4;
+
+    /* Radios */
+    --radius-sm: 10px;
+    --radius-md: 14px;
+    --radius-lg: 36px;
+
+    /* Tipografía */
+    --font-display: 'Fjalla One', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* Google Fonts — importar en app/layout.tsx con next/font, no @import en producción */
+/* Fjalla One:        https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap */
+/* Inter 400-700:      https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap */
+/* JetBrains Mono 5-6: https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&display=swap */
+
+/* Regla de marca: nombres científicos SIEMPRE en --font-body, estilo italic.
+   Ejemplo: <span class="italic font-body">Pogona vitticeps</span> */

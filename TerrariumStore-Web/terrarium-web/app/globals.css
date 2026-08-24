@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+/* ──────────────────────────────────────────
+   Terrarium Store — Design System
+   Tailwind v4: tokens via @theme inline
+   Fuente de verdad: TerrariumStore-Web/Tokens web.css
+   ────────────────────────────────────────── */
+
+@theme inline {
+  /* ── Colores ── */
+  --color-page:        #F7F4EC;
+  --color-paper:       #FFFFFF;
+  --color-ink:         #16261A;
+  --color-ink-soft:    #55635A;
+  --color-line:        #E4DFD1;
+
+  /* Acento principal — CTAs, precios, WhatsApp, link activo */
+  --color-lime:        #5FA832;
+  --color-lime-soft:   #E7F3DA;
+
+  /* Acento Tienda — bordes e íconos comerciales */
+  --color-bamboo:      #B98F4E;
+  --color-bamboo-soft: #F4E9D3;
+
+  /* Acento Veterinaria — exclusivo clínico, NUNCA decorativo */
+  --color-vet:         #B5342A;
+  --color-vet-soft:    #FBE7E4;
+
+  /* Error de formulario (distinto del rojo veterinario) */
+  --color-error:       #DC2626;
+
+  /* ── Tipografía ── */
+  --font-display: var(--font-fjalla), 'Fjalla One', sans-serif;
+  --font-body:    var(--font-inter),  'Inter',       sans-serif;
+  --font-mono:    var(--font-jbmono), 'JetBrains Mono', monospace;
+
+  /* ── Radios ── */
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 36px;
+}
+
+/* ── Base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-page);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Regla de marca: nombres científicos siempre en Inter Italic ── */
+.scientific-name {
+  font-family: var(--font-body);
+  font-style: italic;
+}
+
+/* ── Skeleton loader ── */
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-line) 25%,
+    #ede9dc 50%,
+    var(--color-line) 75%
+  );
+  background-size: 800px 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius-sm);
+}
+
+/* ── Sello Caso Clínico ── */
+.clinical-stamp {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--color-vet);
+  border: 2px solid var(--color-vet);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-14deg);
+  padding: 6px 10px;
+  white-space: nowrap;
+}
